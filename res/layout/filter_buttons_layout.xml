@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip">
+	 	<Button android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="@string/add_new"
+            android:id="@+id/btn_add_new"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+ 	</TableRow>
+ 	<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+	 	<Button android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/from_sms_number"
+            android:id="@+id/btn_from_sms_number"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+	 	<Button android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/from_contacts"
+            android:id="@+id/btn_from_contacts"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+ 	</TableRow>
+ 	<TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+	 	<Button android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/from_sms_body"
+            android:id="@+id/btn_from_sms_body"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+	 	<Button android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/from_call_history"
+            android:id="@+id/btn_from_call_history"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+ 	</TableRow>
+</TableLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="smsspamfilter" default="all">
+  
+  
+  <property file="smsspamfilter.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/.pyc/**"/>
+    <exclude name="**/.pyo/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/*.lib/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/.bundle/**"/>
+    <exclude name="**/*.rbc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.zip"/>
+    <include name="*.apk"/>
+    <include name="*.war"/>
+    <include name="*.egg"/>
+    <include name="*.ear"/>
+    <include name="*.ane"/>
+    <include name="*.swc"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.android_api_20_platform" value="C:/Program Files/Java/jdk1.6.0_23/bin"/>
+  <path id="jdk.classpath.android_api_20_platform">
+    <fileset dir="${jdk.home.android_api_20_platform}">
+      <include name="platforms/android-20/android.jar"/>
+      <include name="platforms/android-20/data/res"/>
+      <include name="tools/support/annotations.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value=""/>
+  <property name="project.jdk.bin" value=""/>
+  <property name="project.jdk.classpath" value=""/>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm4-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module SmsSpamFilter -->
+  
+  <dirname property="module.smsspamfilter.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.smsspamfilter" value="${jdk.home.android_api_20_platform}"/>
+  <property name="module.jdk.bin.smsspamfilter" value="${jdk.bin.android_api_20_platform}"/>
+  <property name="module.jdk.classpath.smsspamfilter" value="jdk.classpath.android_api_20_platform"/>
+  
+  <property name="compiler.args.smsspamfilter" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="smsspamfilter.output.dir" value="/production/SmsSpamFilter"/>
+  <property name="smsspamfilter.testoutput.dir" value="/test/SmsSpamFilter"/>
+  
+  <path id="smsspamfilter.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="smsspamfilter.module.production.classpath">
+    <path refid="${module.jdk.classpath.smsspamfilter}"/>
+  </path>
+  
+  <path id="smsspamfilter.runtime.production.module.classpath">
+    <pathelement location="${smsspamfilter.output.dir}"/>
+  </path>
+  
+  <path id="smsspamfilter.module.classpath">
+    <path refid="${module.jdk.classpath.smsspamfilter}"/>
+    <pathelement location="${smsspamfilter.output.dir}"/>
+  </path>
+  
+  <path id="smsspamfilter.runtime.module.classpath">
+    <pathelement location="${smsspamfilter.testoutput.dir}"/>
+    <pathelement location="${smsspamfilter.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.smsspamfilter">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.smsspamfilter">
+    <patternset refid="excluded.from.module.smsspamfilter"/>
+  </patternset>
+  
+  <path id="smsspamfilter.module.sourcepath">
+    <dirset dir="${module.smsspamfilter.basedir}">
+      <include name="gen"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.smsspamfilter" depends="compile.module.smsspamfilter.production,compile.module.smsspamfilter.tests" description="Compile module SmsSpamFilter"/>
+  
+  <target name="compile.module.smsspamfilter.production" depends="register.custom.compilers" description="Compile module SmsSpamFilter; production classes">
+    <mkdir dir="${smsspamfilter.output.dir}"/>
+    <javac2 destdir="${smsspamfilter.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.smsspamfilter}/javac">
+      <compilerarg line="${compiler.args.smsspamfilter}"/>
+      <bootclasspath refid="smsspamfilter.module.bootclasspath"/>
+      <classpath refid="smsspamfilter.module.production.classpath"/>
+      <src refid="smsspamfilter.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.smsspamfilter"/>
+    </javac2>
+    
+    <copy todir="${smsspamfilter.output.dir}">
+      <fileset dir="${module.smsspamfilter.basedir}/gen">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.smsspamfilter.tests" depends="register.custom.compilers,compile.module.smsspamfilter.production" description="compile module SmsSpamFilter; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.smsspamfilter" description="cleanup module">
+    <delete dir="${smsspamfilter.output.dir}"/>
+    <delete dir="${smsspamfilter.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.smsspamfilter" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.smsspamfilter" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>

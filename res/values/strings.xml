@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmsSpamFilter</string>
+    <string name="app_name_full">SmsSpamFilter</string>
+    <string name="action_about">About</string>
+    <string name="action_send_log">Send error log</string>
+    <string name="version">Version %1$s</string>
+    <string name="no_data">No Data Here</string>
+
+    <!-- Tabs -->
+    <string name="tab_settings">SETTINGS</string>
+    <string name="tab_sms">SMS</string>
+    <string name="tab_allow">ALLOW</string>
+    <string name="tab_block">BLOCK</string>
+    <string name="tab_spam">SPAM</string>
+
+    <!-- Dialog -->
+    <string name="title_info">Info</string>
+    <string name="title_error">Error</string>
+    <string name="title_connection_error">Connection Error</string>
+    <string name="title_please_wait">Please Wait</string>
+    <string name="label_loading">Loading...</string>
+    <string name="message_connection_error">Please Check Internet Connection</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    
+    <!-- Dialog -->
+    <string name="title_selection">Selection</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="allow_number">Add to allow number</string>
+    <string name="allow_text">Add to allow text</string>
+
+    <!-- Messages -->
+    <string name="msg_spam">Spam message received from %1$s</string>
+    
+    <!-- Allow fragment -->
+    <string name="add_new">Add new filter</string>
+    <string name="from_sms_number">From SMS number</string>
+    <string name="from_sms_body">From SMS body</string>
+    <string name="from_call_history">From call history</string>
+    <string name="from_contacts">From contacts</string>
+    
+    <!-- Allow Dialog -->
+    <string name="txt">Text</string>
+    <string name="num">Number</string>
+    <string name="btn_or">OR</string>
+    <string name="btn_and">AND</string>
+    <string name="btn_any">ANY</string>
+    <string-array name="allow_arrays">
+        <item>Text</item>
+        <item>Number</item>
+    </string-array>
+    <string name="regexp_hint">pizza or beer = pizza|beer\npizza and beer = pizza.*beer\nbeer, b*er, b**r = b.{0,2}r</string>
+    
+    <!-- Select time interval dialog -->
+    <string name="select_start_time">Select start time:</string>
+    <string name="select_end_time">Select end time:</string>
+    
+    <!-- UI language dialog -->
+    <string name="choose_user_lang">Choose user interface language</string>
+    <string-array name="lang_arrays">
+        <item>English</item>
+        <item>Russian</item>
+    </string-array>
+
+    <!-- Settings -->
+    <string name="title_lock_settings">Lock settings</string>
+    <string name="title_use_sms_block">Use sms block</string>
+    <string name="title_allow_settings">Allow</string>
+    <string name="title_block_settings">Block</string>
+    
+    <string name="allow_any_cid">Allow from any CID</string>
+    <string name="comment_allow_any_cid">Allow from any CallerID</string>
+     <string name="comment_lock_settings">Only lock settings, prevent accidental changes.</string>
+    <string name="label_allow_my_contacts">Allow my contacts</string>
+    <string name="comment_my_contacts_count">My contacts count: %1$s</string>
+    <string name="label_block_any_number">Block from any CID</string>
+    <string name="comment_block_any_number">Block from any CID</string>
+    <string name="label_block_not_my_contacts">Block not my contacts</string>
+    
+    <string name="block_mismatch_numbers">Block if received number and sender number are mismatch</string>
+    <string name="block_spam_time">Block spam time</string>
+    <string name="spam_time">%1$s:%2$s - %3$s:%4$s</string>
+    <string name="ui_settings">User Interface Settings</string>
+    <string name="choose_language">Choose user interface language</string>
+    <string name="language">%1$s</string>
+    <string name="notif_settings">Notification Settings</string>
+    <string name="notification_on_off">Spam notification on/off</string>
+    <string name="sound_on_off">Sound on/off</string>
+    <string name="vibration_on_off">Vibration on/off</string>
+    <string name="backup_title">Settings</string>
+    <string name="backup_settings">Backup</string>
+    <string name="restore_settings">Restore</string>
+    
+    <!-- Notification -->
+    <string name="title_spam_blocked">Spam blocked</string>
+    <string name="msg_touch">Touch to check blocked spam</string>
+    
+    <!-- Sender -->
+    <string name="draft">Draft</string>
+    <string name="sender">Sender:</string>
+    <string name="insert_in_sms_list">Copy to message box</string>
+    
+    <!-- Crash log -->
+    <string name="msg_file_is_not_available">File is not available</string>
+    <string name="title_error_log">Error log</string>
+    <string name="send_error_log">Send error log by email</string>
+    <string name="support_email_subject">SmsSpamFilter application</string>
+    <string name="support_email_body">This email was generated by the SmsSpamFilter android application.</string>
+    <string name="send_log_warning_message">Select a native mail client to send log</string>
+    <string name="send_log_failed">Can\'t send email</string>
+    <string name="support_email_chooser">Email file</string>
+    <string name="warning_label">Warning</string>
+    
+    <!-- Backup user messages -->
+    <string name="msg_backup">Backup saved %1$s</string>
+    <string name="msg_restore">Settings restored</string>
+    <string name="msg_restore_not_found">Backup is empty</string>
+    
+    <!-- Log labels -->
+    <string name="title_log">Log</string>
+    <string name="label_log">Send Log</string>
+    
+    <!-- Notifications -->
+    <string name="regexp_contains_spam">Regexp contains spam %1$s</string>
+	<string name="number_contains_spam">Number contains spam %1$s</string>
+	<string name="text_contains_spam">Text contains spam %1$s</string>
+	<string name="block_not_my_contacts">Block not my contacts %1$s</string>
+	<string name="block_from_any_cid">Block from any CID %1$s</string>
+	<string name="spam_received_in_blocked_time_period">Spam received in blocked time period %1$s</string>
+	<string name="label_log2">Save to log</string>
+</resources>

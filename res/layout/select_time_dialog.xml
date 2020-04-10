@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/gray">
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="@color/black">
+	    
+	    <TextView
+	        android:id="@+id/select_start_time"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/select_start_time"
+	        android:textSize="20sp"
+	        android:padding="5dp"
+	    	android:layout_margin="5dp"
+	    	android:paddingTop="0dp"
+	    	android:layout_marginTop="0dp"
+	    	android:paddingBottom="0dp"
+	    	android:layout_marginBottom="0dp"/>
+	    
+	    <TimePicker
+	        android:id="@+id/timePicker1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"/>
+	 
+	    <TextView
+	        android:id="@+id/select_end_time"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/select_end_time"
+	        android:textSize="20sp"
+	        android:padding="5dp"
+	    	android:layout_margin="5dp"
+	    	android:paddingTop="0dp"
+	    	android:layout_marginTop="0dp"
+	    	android:paddingBottom="0dp"
+	    	android:layout_marginBottom="0dp"/>
+	    
+	    <TimePicker
+	        android:id="@+id/timePicker2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:paddingBottom="5dp"/>
+	</LinearLayout>
+	    
+    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_gravity="center_horizontal"
+	    android:background="@color/gray">
+	    <Button
+	        android:id="@+id/btn_ok"
+	        android:layout_weight="1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/ok"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginRight="5dp"/>
+		<Button
+	        android:id="@+id/btn_cancel"
+	        android:layout_weight="1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/cancel"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginRight="5dp"/>
+	</LinearLayout>
+ 
+</LinearLayout>

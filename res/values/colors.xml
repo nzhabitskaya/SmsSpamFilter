@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- My simple colors -->
+    <color name="transparent">#00000000</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="blue">#1d41a6</color>
+    <color name="red">#ff0003</color>
+    <color name="gray">#bebebe</color>
+    
+    <color name="bg_top">#3e3e3e</color>
+    <color name="bg_bottom">#121212</color>
+    
+    <color name="green">#00af50</color>
+    <color name="lightgreen">#92d050</color>
+    <color name="yellow">#ffff00</color>
+    <color name="lightgray">#7e7e7e</color>
+    <color name="darkgray">#343434</color>
+    
+    <color name="border_color">#737c7e</color>
+
+</resources>

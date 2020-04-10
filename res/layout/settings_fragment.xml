@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+	    
+	    <!-- Block 2 -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"
+	        android:background="@color/lightgray"
+	        android:orientation="vertical" 
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp">
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="2dp"
+	            android:text="@string/title_use_sms_block"
+	            android:textColor="@color/gray"
+	            android:paddingLeft="4dp"
+	            android:textSize="16sp" />
+	    </LinearLayout>
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+
+	        <CheckBox
+	            android:id="@+id/cb_use_sms_block"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:paddingRight="3dp" />
+
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_toLeftOf="@id/cb_use_sms_block"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/title_use_sms_block"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+	    </RelativeLayout>	    
+	   
+	    <!-- Block 3 -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"
+	        android:background="@color/lightgray"
+	        android:orientation="vertical"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp">
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="2dp"
+	            android:text="@string/title_allow_settings"
+	            android:textColor="@color/gray"
+	            android:paddingLeft="4dp"
+	            android:textSize="16sp" />
+	    </LinearLayout>
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	        <CheckBox
+	            android:id="@+id/cb_allow_any_cid"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:paddingRight="3dp"/>
+
+	        <TextView
+	            android:id="@+id/allow_any_cid"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_margin="5dp"
+	            android:layout_toLeftOf="@id/cb_allow_any_cid"
+	            android:paddingLeft="5dp"
+	            android:text="@string/allow_any_cid"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+
+	    </RelativeLayout>
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="5dp"
+	        android:layout_marginLeft="5dp"
+	        android:paddingLeft="7dp"
+	        android:text="@string/comment_allow_any_cid"
+	        android:textColor="@color/white"
+	        android:textSize="16sp" />
+
+	    <include
+		    android:layout_height="1dp"
+		    android:layout_width="fill_parent"
+		    layout="@layout/separator"
+		    android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"/>
+
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+
+	        <CheckBox
+	            android:id="@+id/cb_allow_my_contacts"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:checked="false"
+	            android:paddingRight="3dp" />
+
+	        <TextView
+	            android:id="@+id/title3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@id/cb_allow_my_contacts"
+	            android:layout_alignParentLeft="true"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/label_allow_my_contacts"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@id/cb_allow_my_contacts"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@id/title3"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginBottom="5dp"
+	            android:paddingLeft="7dp"
+	            android:id="@+id/comment_my_contacts_count"
+	            android:text="@string/comment_my_contacts_count"
+	            android:textColor="@color/white"
+	            android:textSize="16sp" />
+	    </RelativeLayout>
+	    
+	    <!-- Block 4 -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"
+	        android:background="@color/lightgray"
+	        android:orientation="vertical"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp">
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="2dp"
+	            android:text="@string/title_block_settings"
+	            android:textColor="@color/gray"
+	            android:paddingLeft="4dp"
+	            android:textSize="16sp" />
+	    </LinearLayout>
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+
+	        <CheckBox
+	            android:id="@+id/cb_block_any_number"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:checked="false"
+	            android:paddingRight="3dp" />
+
+	        <TextView
+	            android:id="@+id/title4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@id/cb_block_any_number"
+	            android:layout_alignParentLeft="true"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/label_block_any_number"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@id/cb_block_any_number"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@id/title4"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginBottom="5dp"
+	            android:paddingLeft="7dp"
+	            android:text="@string/comment_block_any_number"
+	            android:textColor="@color/white"
+	            android:textSize="16sp" />
+	    </RelativeLayout>
+	    <include
+		    android:layout_height="1dp"
+		    android:layout_width="fill_parent"
+		    layout="@layout/separator"
+		    android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"/>
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+
+	        <CheckBox
+	            android:id="@+id/cb_block_not_my_contacts"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:checked="false"
+	            android:paddingRight="3dp" />
+
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@id/cb_block_not_my_contacts"
+	            android:layout_alignParentLeft="true"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/label_block_not_my_contacts"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+	    </RelativeLayout>
+	    <include
+		    android:layout_height="1dp"
+		    android:layout_width="fill_parent"
+		    layout="@layout/separator"
+		    android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"/>
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	        <CheckBox
+	            android:id="@+id/cb_block_spam_time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:paddingRight="3dp"/>
+	        <TextView
+	            android:id="@+id/btn_block_spam_time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@id/cb_block_spam_time"
+	            android:layout_alignParentLeft="true"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/block_spam_time"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+	        <TextView
+	            android:id="@+id/spam_time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@id/cb_block_spam_time"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@id/btn_block_spam_time"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginBottom="5dp"
+	            android:paddingLeft="7dp"
+	            android:paddingBottom="5dp"
+	            android:text="@string/spam_time"
+	            android:textColor="@color/white"
+	            android:textSize="16sp" />
+	    </RelativeLayout>
+	    
+		<!-- Block 6 -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"
+	        android:background="@color/lightgray"
+	        android:orientation="vertical"
+	        android:layout_marginBottom="5dp">
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="2dp"
+	            android:paddingLeft="4dp"
+	            android:text="@string/notif_settings"
+	            android:textColor="@color/gray"
+	            android:textSize="16sp" />
+	    </LinearLayout>
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+
+	        <CheckBox
+	            android:id="@+id/cb_notification_on_off"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:checked="false"
+	            android:paddingRight="3dp" />
+
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@id/cb_notification_on_off"
+	            android:layout_alignParentLeft="true"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/notification_on_off"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+	    </RelativeLayout>
+	    <include
+		    android:layout_height="1dp"
+		    android:layout_width="fill_parent"
+		    layout="@layout/separator"
+		    android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"/>
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	        <CheckBox
+	            android:id="@+id/cb_sound_on_off"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:paddingRight="3dp"/>
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_toLeftOf="@id/cb_sound_on_off"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/sound_on_off"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+	    </RelativeLayout>
+	    <include
+		    android:layout_height="1dp"
+		    android:layout_width="fill_parent"
+		    layout="@layout/separator"
+		    android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"/>
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	        <CheckBox
+	            android:id="@+id/cb_vibration_on_off"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:paddingRight="3dp"/>
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_toLeftOf="@id/cb_vibration_on_off"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/vibration_on_off"
+	            android:textColor="@color/white"
+	            android:textSize="20sp" />
+	    </RelativeLayout>
+	    
+		<!-- Block 7 -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"
+	        android:background="@color/lightgray"
+	        android:orientation="vertical"
+	        android:layout_marginBottom="5dp">
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="2dp"
+	            android:paddingLeft="4dp"
+	            android:text="@string/backup_title"
+	            android:textColor="@color/gray"
+	            android:textSize="16sp" />
+	    </LinearLayout>
+	    <RelativeLayout
+	        android:id="@+id/btn_backup_settings"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/backup_settings"
+	            android:textColor="@color/white"
+	            android:textSize="20sp"
+	            android:paddingBottom="7dp"/>
+	    </RelativeLayout>
+	    <include
+		    android:layout_height="1dp"
+		    android:layout_width="fill_parent"
+		    layout="@layout/separator"
+		    android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"/>
+	    <RelativeLayout
+	        android:id="@+id/btn_restore_settings"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/restore_settings"
+	            android:textColor="@color/white"
+	            android:textSize="20sp"
+	            android:paddingBottom="10dp"/>
+	    </RelativeLayout>
+	    
+	    <!-- Block 8 -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"
+	        android:background="@color/lightgray"
+	        android:orientation="vertical"
+	        android:layout_marginBottom="5dp">
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="2dp"
+	            android:paddingLeft="4dp"
+	            android:text="@string/title_log"
+	            android:textColor="@color/gray"
+	            android:textSize="16sp" />
+	    </LinearLayout>
+	    <RelativeLayout
+	        android:id="@+id/btn_send_log"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/label_log"
+	            android:textColor="@color/white"
+	            android:textSize="20sp"
+	            android:paddingBottom="7dp"/>
+	    </RelativeLayout>
+	     <RelativeLayout
+	        android:id="@+id/btn_send_log2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	         <CheckBox
+	            android:id="@+id/btn_send_check_log2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:paddingRight="3dp"/>
+	        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_margin="5dp"
+	            android:paddingLeft="5dp"
+	            android:text="@string/label_log2"
+	            android:textColor="@color/white"
+	            android:textSize="20sp"
+	            android:paddingBottom="7dp"/>
+	    </RelativeLayout> 
+	</LinearLayout>
+	
+	</ScrollView>

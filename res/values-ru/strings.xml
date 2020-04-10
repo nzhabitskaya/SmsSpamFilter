@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">СмсСпамФильтр</string>
+    <string name="app_name_full">СмсСпамФильтр</string>
+    <string name="action_about">О программе</string>
+    <string name="action_send_log">Отправить лог об ошибках</string>
+    <string name="version">Версия %1$s</string>
+    <string name="no_data">Нет данных</string>
+
+    <!-- Tabs -->
+    <string name="tab_settings">НАСТРОЙКИ</string>
+    <string name="tab_sms">СМС</string>
+    <string name="tab_allow">РАЗРЕШИТЬ</string>
+    <string name="tab_block">БЛОКИРОВАТЬ</string>
+    <string name="tab_spam">СПАМ</string>
+
+    <!-- Dialog -->
+    <string name="title_info">Информация</string>
+    <string name="title_error">Ошибка</string>
+    <string name="title_connection_error">Ошибка соединения</string>
+    <string name="title_please_wait">Пожалуйста, подождите</string>
+    <string name="label_loading">Идет загрузка...</string>
+    <string name="message_connection_error">Проверьте интернет соединение</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Отмена</string>
+    
+    <!-- Dialog -->
+    <string name="title_selection">Выбор</string>
+    <string name="update">Обновить</string>
+    <string name="delete">Удалить</string>
+    <string name="allow_number">Добавить номер в разрешенные</string>
+    <string name="allow_text">Добавить текст в разрешенные</string>
+
+    <!-- Messages -->
+    <string name="msg_spam">Получен спам от номера %1$s</string>
+    
+    <!-- Allow fragment -->
+    <string name="add_new">Добавить новый</string>
+    <string name="from_sms_number">Из смс номера</string>
+    <string name="from_call_history">Из истории звонков</string>
+    <string name="from_sms_body">Из смс текста</string>
+    <string name="from_contacts">Из контактов</string>
+    
+    <!-- Allow Dialog -->
+    <string name="txt">Текст</string>
+    <string name="num">Номер</string>
+    <string name="btn_or">ИЛИ</string>
+    <string name="btn_and">И</string>
+    <string name="btn_any">ЛЮБОЙ</string>
+    <string-array name="allow_arrays">
+        <item>Текст</item>
+        <item>Номер</item>
+    </string-array>
+    <string name="regexp_hint">пицца или пиво = пицца|пиво\nпицца и пиво = пицца.*пиво\nпиво, п*во, п**о = п.{0,2}о</string>
+    
+    <!-- Select time interval dialog -->
+    <string name="select_start_time">Начальное время:</string>
+    <string name="select_end_time">Конечное время:</string>
+    
+    <!-- UI language dialog -->
+    <string name="choose_user_lang">Выберите язык интерфейса</string>
+    <string-array name="lang_arrays">
+        <item>Английский</item>
+        <item>Русский</item>
+    </string-array>
+
+    <!-- Settings -->
+    <string name="title_lock_settings">Заблокировать настройки</string>
+    <string name="title_use_sms_block">Использовать блокировку</string>
+    <string name="title_allow_settings">Разрешать</string>
+    <string name="title_block_settings">Запрещать</string>
+    
+    <string name="allow_any_cid">Любой CallerID</string>
+    <string name="comment_allow_any_cid">Разрешать от любого CID</string>
+    <string name="comment_lock_settings">Заблокировать изменение настроек</string>
+    <string name="label_allow_my_contacts">Контакты</string>
+    <string name="comment_my_contacts_count">Количество контактов: %1$s</string>
+    <string name="label_block_any_number">Любой CallerID</string>
+    <string name="comment_block_any_number">Блокировать от любого CID</string>
+    <string name="label_block_not_my_contacts">Не из контактов</string>
+    
+    <string name="block_mismatch_numbers">Блокировать если номер отправителя и получателя не совпадают</string>
+    <string name="block_spam_time">Время блокировки</string>
+    <string name="spam_time">%1$s:%2$s - %3$s:%4$s</string>
+    <string name="ui_settings">Настройки пользовательского интерфейса</string>
+    <string name="choose_language">Выберете язык</string>
+    <string name="language">%1$s</string>
+    <string name="notif_settings">Уведомление о спаме</string>
+    <string name="notification_on_off">Сообщение</string>
+    <string name="sound_on_off">Звук</string>
+    <string name="vibration_on_off">Вибрация</string>
+    <string name="backup_title">Настройки</string>
+    <string name="backup_settings">Экспортировать</string>
+    <string name="restore_settings">Импортировать</string>
+    
+    <!-- Notification -->
+    <string name="title_spam_blocked">Спам заблокирован</string>
+    <string name="msg_touch">Коснитесь чтобы перейти к закладке Спам</string>
+    
+    <!-- Sender -->
+    <string name="draft">Черновики</string>
+    <string name="sender">Отправитель:</string>
+    <string name="insert_in_sms_list">Скопировать в список смс</string>
+    
+    <!-- Crash log -->
+    <string name="msg_file_is_not_available">Лог файл недоступен</string>
+    <string name="title_error_log">Лог приложения СмсСпамФильтр</string>
+    <string name="send_error_log">Отправить лог</string>
+    <string name="support_email_subject">Приложение СмсСпамФильтр</string>
+    <string name="support_email_body">Это письмо отправлено из приложения СмсСпамФильтр.</string>
+    <string name="send_log_warning_message">Выберите приложение для отправки лога</string>
+    <string name="send_log_failed">Невозможно отправить лог</string>
+    <string name="support_email_chooser">Лог файл</string>
+    <string name="warning_label">Предупреждение</string>
+    
+    <!-- Backup user messages -->
+    <string name="msg_backup">Настройки сохранены по адресу %1$s</string>
+    <string name="msg_restore">Настройки восстановлены</string>
+    <string name="msg_restore_not_found">Нет файла с настройками</string>
+    
+    <!-- Log labels -->
+    <string name="title_log">Лог</string>
+    <string name="label_log">Отправить лог</string>
+    
+    <!-- Notifications -->
+    <string name="regexp_contains_spam">%1$s не содержится в белом списке</string>
+	<string name="number_contains_spam">%1$s содержится в черном списке</string>
+	<string name="text_contains_spam">%1$s заблокирован, текст содержит спам</string>
+	<string name="block_not_my_contacts">%1$s не содержится в списке контактов</string>
+	<string name="block_from_any_cid">Заблокирован %1$s от любого CID</string>
+	<string name="spam_received_in_blocked_time_period">Заблокирован %1$s в интервал времени</string>
+	<string name="label_log2">Сохранить лог в файл</string>
+</resources>
